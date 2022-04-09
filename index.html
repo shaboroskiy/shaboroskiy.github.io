@@ -99,6 +99,21 @@ font-size: 3em;
     <td align="center"><b>E-mail</b></td>
     <td align="center"><b>Пароль</b></td>
    </tr>
+    <?php
+     $data = file("baza.txt");
+     $cn=1;
+     foreach ($data as $line) {
+         $trs = explode(";", $line);
+         ?>
+                <tr>
+                <td><?php echo $cn; ?></td>          
+         <td><?php echo $trs[0]; ?></td>
+         <td><?php echo $trs[1]; ?></td>
+         <td><?php echo $trs[2]; ?></td>
+         <td><?php echo $trs[3]; ?></td>
+                </tr>
+       <?php $cn++;  }  ?>
+</TABLE>
         </td>
         <td width="70%">
             
