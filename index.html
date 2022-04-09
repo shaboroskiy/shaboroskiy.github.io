@@ -137,21 +137,17 @@ font-size: 3em;
     <td align="center"><b>E-mail</b></td>
     <td align="center"><b>Пароль</b></td>
    </tr>
-    <?php
-     $data = file("baza.txt");
-     $cn=1;
-     foreach ($data as $line) {
-         $trs = explode(";", $line);
-         ?>
-                <tr>
-                <td><?php echo $cn; ?></td>          
-         <td><?php echo $trs[0]; ?></td>
-         <td><?php echo $trs[1]; ?></td>
-         <td><?php echo $trs[2]; ?></td>
-         <td><?php echo $trs[3]; ?></td>
-                </tr>
-       <?php $cn++;  }  ?>
+   <h1 align="center">Інформація про відвідувачів</h1>
+<TABLE align="center" border="1" width="90%" style='font-size:100%'>
+   <tr>
+   <td align="center"><b>Npp</b></td>
+    <td align="center"><b>IP address</b></td>
+    <td align="center"><b>Браузер</b></td>
+    <td align="center"><b>Дата</b></td>
+    </tr>
+
 </TABLE>
+       <?php $cn++;  }
         </td>
         <td width="70%">
             
